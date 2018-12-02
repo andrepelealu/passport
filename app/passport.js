@@ -57,7 +57,7 @@ module.exports = function(passport) {
          return done(null, false, req.flash('loginMsg', "User belum terdaftar"));
 
         if(!user.checkPassword(password))
-          return done(null, false, req.flash('loginMsg', "Password ente salah gan!"));
+          return done(null, false, req.flash('loginMsg', "Password salah!"));
 
         return done(null, user);
     });

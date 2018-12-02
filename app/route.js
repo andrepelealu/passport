@@ -5,18 +5,20 @@ module.exports = function(app, passport) {
   });
 
   //========= Login ====================
-  app.get('/login', function(req, res){
+  app.get('/login', function(req, res,next){
     res.render('login.ejs', { message: req.flash('loginMsg') });
   });
 
-  app.post('/login',
+  app.post('/login',function(req, res,next){
     passport.authenticate('local-login', {
       successRedirect : '/profile',
       failureRedirect : '/login',
       failureFlash    : true
-  }))
-  return res.json({message:"berhasil"}
-);
+  })(req,res,next)
+  return res.json({message:"berhasil"});
+})
+
+
 
   //========= Logout ====================
   app.get('/logout', function(req, res){
