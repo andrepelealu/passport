@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auth Profile</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <h1>Halaman Profile</h1>
+
+   <p> <%= user._id %> </p>
+   <p> <%= user.local.email %> </p>
+   <p> <%= user.local.password %> </p>
+
+  <a href="/logout"> logout </a>
+</body>
+</html>

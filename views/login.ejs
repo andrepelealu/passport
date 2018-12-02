@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auth Home</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <h1>Halaman Login</h1>
+
+  <% if(message.length > 0) { %>
+    <div class="error"><%= message %> </div>
+  <% } %>
+
+  <form action="/login" method="post">
+    <label for="">email</label>
+    <input type="email" name="email" >
+
+    <br>
+    <label for="">password</label>
+    <input type="password" name="password" >
+
+    <br>
+    <input type="submit" name="name" value="Login">
+  </form>
+
+
+</body>
+</html>
