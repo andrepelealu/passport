@@ -8,10 +8,11 @@
 <body>
   <h1>Halaman Profile</h1>
 
-   <p> <%= user._id %> </p>
-   <p> <%= user.local.email %> </p>
-   <p> <%= user.local.password %> </p>
-
+   <p> id : <%= user._id %> </p>
+   <p> email : <%= user.local.email %> </p>
+   <p> password(hash) : <%= user.local.password %> </p>
+   <p> nama: <%= user.local.nama %> </p>
+   <p> username : <%= user.local.username %> </p>
   <a href="/logout"> logout </a>
 </body>
 </html>
